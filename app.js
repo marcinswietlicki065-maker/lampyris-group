@@ -42,7 +42,7 @@
     });
   });
 
-  /* ---------- kalkulator wyceny (lejek) ---------- */
+  /* ---------- formularz darmowej wyceny (lejek) ---------- */
   var quiz=quizEl; if(!quiz) return;
   var state={step:1,type:null,size:50,std:1};
   var steps=quiz.querySelectorAll('.q');
@@ -80,12 +80,11 @@
     back.disabled=state.step===1||state.step===5;
     next.hidden=state.step===5;
     next.disabled=state.step===1&&!state.type;
-    next.textContent=state.step===3?'Pokaż wycenę':state.step===4?'Wyślij zgłoszenie':'Dalej';
+    next.textContent=state.step===4?'Poproś o wycenę':'Dalej';
     secure.hidden=state.step!==4;
     if(state.step===4){
-      var e=estimate();
-      document.getElementById('q-est').textContent=fmt(e[0])+' – '+fmt(e[1]);
-      document.getElementById('q-est-note').textContent=sizeText()+' · '+STD[state.std]+' · netto, bez materiałów';
+      var names={mieszkanie:'Mieszkanie',lazienka:'Łazienka',strych:'Strych',klatka:'Klatka schodowa'};
+      document.getElementById('q-summary').textContent=names[state.type]+', '+sizeText()+', standard '+STD[state.std]+'. Irek oddzwoni w ciągu 24 godzin roboczych i umówi bezpłatne oględziny.';
     }
   }
   function setType(v){
@@ -107,21 +106,20 @@
   size.addEventListener('input',function(){state.size=+size.value;sizeOut.textContent=sizeText()});
   back.addEventListener('click',function(){if(state.step>1){state.step--;err.textContent='';render()}});
   next.addEventListener('click',function(){
-    if(state.step<4){state.step++;render();if(state.step===4)track('quiz_estimate');return}
+    if(state.step<4){state.step++;render();if(state.step===4)track('quiz_contact_step');return}
     var name=document.getElementById('q-name'), phone=document.getElementById('q-phone'), rodo=document.getElementById('q-rodo');
     if(!name.value.trim()){err.textContent='Wpisz imię, żebyśmy wiedzieli, jak się do Ciebie zwracać.';name.focus();return}
     if(phone.value.replace(/\D/g,'').length<9){err.textContent='Wpisz numer telefonu (9 cyfr), żebyśmy mogli oddzwonić.';phone.focus();return}
     if(!rodo.checked){err.textContent='Zaznacz zgodę na kontakt, żebyśmy mogli oddzwonić z wyceną.';rodo.focus();return}
     err.textContent='';
-    var e=estimate();
-    var lead={_subject:'Nowe zapytanie z kalkulatora: '+state.type,imie:name.value.trim(),telefon:phone.value.trim(),rodzaj:state.type,wielkosc:sizeText(),
-      standard:STD[state.std],miasto:document.getElementById('q-city').value,termin:document.getElementById('q-when').value,wycena:fmt(e[0])+' – '+fmt(e[1])};
+    var lead={_subject:'Prośba o darmową wycenę: '+state.type,imie:name.value.trim(),telefon:phone.value.trim(),rodzaj:state.type,wielkosc:sizeText(),
+      standard:STD[state.std],miasto:document.getElementById('q-city').value,termin:document.getElementById('q-when').value,opis:document.getElementById('q-msg').value.trim().slice(0,1000)};
     var ep=quiz.dataset.endpoint;
     if(!ep){err.textContent='Wysyłka zgłoszeń nie jest jeszcze podłączona. Zadzwoń pod '+PHONE+'.';return}
     next.disabled=true; next.textContent='Wysyłanie…';
     fetch(ep,{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify(lead)})
       .then(function(r){if(!r.ok)throw 0;state.step=5;render();track('generate_lead',{type:state.type})})
-      .catch(function(){err.textContent='Nie udało się wysłać. Zadzwoń pod '+PHONE+'.';next.disabled=false;next.textContent='Wyślij zgłoszenie'});
+      .catch(function(){err.textContent='Nie udało się wysłać. Zadzwoń pod '+PHONE+'.';next.disabled=false;next.textContent='Poproś o wycenę'});
   });
   document.querySelectorAll('[data-pick]').forEach(function(a){
     a.addEventListener('click',function(){
