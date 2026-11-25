@@ -6,9 +6,9 @@
 <meta name="robots" content="noindex">
 <meta name="theme-color" content="#15181B">
 <title>Świetlicki Wykończenia — remonty i wykończenia wnętrz w Trójmieście</title>
-<meta name="description" content="Wykańczanie mieszkań, remonty łazienek, adaptacje strychów i klatek schodowych w Gdańsku, Gdyni i Sopocie. Stała cena w umowie, 24 miesiące gwarancji. Wycena online w 60 sekund.">
+<meta name="description" content="Wykańczanie mieszkań, remonty łazienek, adaptacje strychów i klatek schodowych w Gdańsku, Gdyni i Sopocie. Stała cena w umowie, 24 miesiące gwarancji. Bezpłatne oględziny i wycena — oddzwaniamy w 24 godziny robocze.">
 <meta property="og:title" content="Świetlicki Wykończenia">
-<meta property="og:description" content="Remonty i wykończenia wnętrz w Trójmieście. Wycena online w 60 sekund.">
+<meta property="og:description" content="Remonty i wykończenia wnętrz w Trójmieście. Bezpłatne oględziny i wycena — oddzwaniamy w 24 godziny robocze.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://images.unsplash.com/photo-1745429523617-0d837856ca35?auto=format&fit=crop&w=1200&h=630&q=70">
 <link rel="preconnect" href="https://images.unsplash.com">
@@ -50,7 +50,7 @@
       </ul>
       <div class="head-actions">
         <a class="phone-pill" href="tel:+48500000000"><span>500 000 000</span><i><svg width="16" height="16"><use href="#i-phone"/></svg></i></a>
-        <a class="btn btn-sand" href="#wycena">Wyceń remont</a>
+        <a class="btn btn-sand" href="#wycena">Darmowa wycena</a>
         <button class="burger" type="button" id="burger" aria-label="Otwórz menu" aria-expanded="false" aria-controls="drawer"><span></span></button>
       </div>
     </nav>
@@ -72,7 +72,7 @@
   </nav>
   <div class="drawer-foot">
     <a class="phone-pill" href="tel:+48500000000"><span>+48 500 000 000</span><i><svg width="16" height="16"><use href="#i-phone"/></svg></i></a>
-    <a class="btn btn-sand btn-block" href="#wycena">Wyceń remont w 60 sekund</a>
+    <a class="btn btn-sand btn-block" href="#wycena">Poproś o darmową wycenę</a>
   </div>
 </div>
 
@@ -91,25 +91,26 @@
         <h1>Wykończenie wnętrz <strong>bez niespodzianek</strong> w&nbsp;kosztorysie</h1>
         <p class="lead">Mieszkania pod klucz, łazienki, strychy i klatki schodowe. Jedna stała ekipa, cena zapisana w umowie i Irek Świetlicki osobiście na każdej wycenie.</p>
         <div class="hero-cta">
-          <a class="btn btn-sand" href="#wycena">Wyceń remont online <svg width="18" height="18"><use href="#i-arrow"/></svg></a>
+          <a class="btn btn-sand" href="#wycena">Poproś o darmową wycenę <svg width="18" height="18"><use href="#i-arrow"/></svg></a>
           <a class="btn btn-ghost-light" href="tel:+48500000000"><svg width="18" height="18"><use href="#i-phone"/></svg>Zadzwoń</a>
         </div>
         <div class="hero-points">
           <div><b>24 mies.</b><span>gwarancji na robociznę</span></div>
-          <div><b>48 h</b><span>na pisemny kosztorys</span></div>
+          <div><b>0 zł</b><span>za oględziny i kosztorys</span></div>
           <div><b>VAT 8%</b><span>w lokalach mieszkalnych</span></div>
         </div>
       </div>
 
-      <!-- LEJEK: kalkulator wyceny. Wysyłka: wpisz adres w data-endpoint, np. https://formsubmit.co/ajax/twoj@email.pl -->
+      <!-- LEJEK: formularz darmowej wyceny. Wysyłka: wpisz adres w data-endpoint, np. https://formsubmit.co/ajax/twoj@email.pl -->
       <div class="quiz" id="wycena" data-endpoint="">
         <div class="quiz-head">
-          <div class="quiz-title"><h2>Wycena w 60 sekund</h2><span class="quiz-step" id="q-step">Krok 1 z 4</span></div>
+          <div class="quiz-title"><h2>Poproś o darmową wycenę</h2><span class="quiz-step" id="q-step">Krok 1 z 4</span></div>
           <div class="bar" aria-hidden="true"><i id="q-bar"></i></div>
         </div>
         <div class="quiz-body">
           <div class="q" data-step="1">
             <p class="q-label">Co chcesz wyremontować?</p>
+            <p class="q-hint">Oględziny i kosztorys są bezpłatne i do niczego nie zobowiązują.</p>
             <div class="tiles" role="group" aria-label="Rodzaj prac">
               <button type="button" class="tile" data-k="type" data-v="mieszkanie" aria-pressed="false"><svg width="24" height="24"><use href="#i-home"/></svg><b>Mieszkanie</b><span>wykończenie pod klucz</span></button>
               <button type="button" class="tile" data-k="type" data-v="lazienka" aria-pressed="false"><svg width="24" height="24"><use href="#i-bath"/></svg><b>Łazienka</b><span>remont kompleksowy</span></button>
@@ -140,16 +141,13 @@
             </label>
           </div>
           <div class="q" data-step="4" hidden>
-            <div class="estimate" aria-live="polite">
-              <small>Orientacyjny koszt robocizny</small>
-              <b id="q-est">—</b>
-              <span id="q-est-note">netto, bez materiałów</span>
-            </div>
-            <p class="q-hint" style="margin-top:0">Zostaw numer. Irek oddzwoni, doprecyzuje zakres i umówi bezpłatne oględziny.</p>
+            <p class="q-label">Gdzie oddzwonić z wyceną?</p>
+            <p class="q-hint" id="q-summary">Irek oddzwoni w ciągu 24 godzin roboczych i umówi bezpłatne oględziny.</p>
             <div class="row">
               <label for="q-name">Imię<input type="text" id="q-name" autocomplete="given-name"></label>
               <label for="q-phone">Telefon<input type="tel" id="q-phone" autocomplete="tel" inputmode="tel" placeholder="600 123 456"></label>
             </div>
+            <label for="q-msg">Kilka słów o remoncie <span style="color:var(--muted);font-weight:400">(opcjonalnie)</span><textarea id="q-msg" rows="2" placeholder="Np. łazienka w bloku, prysznic zamiast wanny" style="min-height:76px;resize:vertical"></textarea></label>
             <label class="consent" for="q-rodo"><input type="checkbox" id="q-rodo"><span>Zgadzam się na kontakt telefoniczny w sprawie wyceny. Zasady przetwarzania danych opisuje <a href="polityka-prywatnosci.html" target="_blank" rel="noopener">polityka prywatności</a>.</span></label>
             <p class="err" id="q-err" role="alert"></p>
           </div>
@@ -157,9 +155,9 @@
             <div class="done-icon"><svg width="26" height="26"><use href="#i-check"/></svg></div>
             <p class="q-label">Dziękujemy, zgłoszenie przyjęte</p>
             <ol class="next-steps">
-              <li><p>Oddzwonimy w godzinach pracy, zwykle w ciągu 2 godzin.</p></li>
+              <li><p>Oddzwonimy w ciągu 24 godzin roboczych.</p></li>
               <li><p>Umówimy bezpłatne oględziny w dogodnym terminie.</p></li>
-              <li><p>Pisemny kosztorys dostaniesz do 48 godzin po wizycie.</p></li>
+              <li><p>Pisemny kosztorys dostaniesz do 48 godzin po wizycie. Za darmo.</p></li>
             </ol>
           </div>
         </div>
@@ -348,7 +346,7 @@
       </div>
       <div class="price-foot">
         <p>W lokalach mieszkalnych do 150 m² stosujemy VAT 8%.</p>
-        <a class="btn btn-dark" href="#wycena">Policz swój remont <svg width="18" height="18"><use href="#i-arrow"/></svg></a>
+        <a class="btn btn-dark" href="#wycena">Poproś o darmową wycenę <svg width="18" height="18"><use href="#i-arrow"/></svg></a>
       </div>
     </div>
   </section>
@@ -375,7 +373,7 @@
       </div>
       <div class="faq">
         <details><summary>Jak szybko możecie zacząć?</summary><p>Oględziny umawiamy zwykle w ciągu kilku dni. Termin startu zależy od grafiku i wpisujemy go do umowy razem z datą zakończenia.</p></details>
-        <details><summary>Czy kalkulator podaje ostateczną cenę?</summary><p>Nie. Kalkulator daje orientacyjny przedział dla typowego zakresu. Wiążącą cenę podajemy w pisemnym kosztorysie po oględzinach.</p></details>
+        <details><summary>Ile kosztuje wycena?</summary><p>Nic. Przyjazd, oględziny i pisemny kosztorys są bezpłatne i do niczego nie zobowiązują. Decyzję podejmujesz, kiedy masz wszystko na papierze.</p></details>
         <details><summary>Czy kupujecie materiały?</summary><p>Tak, jeśli chcesz. Doradzamy, kupujemy w hurtowniach z rabatem i dowozimy na budowę. Możesz też dostarczyć własne.</p></details>
         <details><summary>Czy muszę być na miejscu w trakcie prac?</summary><p>Nie. Wystarczy przekazać klucze. Co tydzień dostajesz zdjęcia postępu, a decyzje, np. układ płytek, uzgadniamy telefonicznie.</p></details>
         <details><summary>Pracujecie ze wspólnotami mieszkaniowymi?</summary><p>Tak. Przygotowujemy ofertę dla zarządu, ustalamy harmonogram i wywieszamy ogłoszenia. Pracujemy etapami, fakturę wystawiamy na wspólnotę.</p></details>
@@ -387,11 +385,11 @@
     <div class="wrap final-grid">
       <div>
         <span class="eyebrow">Bezpłatna wycena</span>
-        <h2>Sprawdź, ile będzie kosztował Twój remont</h2>
-        <p>Cztery pytania i masz orientacyjną kwotę. Wiążący kosztorys po bezpłatnych oględzinach.</p>
+        <h2>Poproś o darmową wycenę remontu</h2>
+        <p>Cztery krótkie pytania. Oddzwonimy w 24 godziny robocze, przyjedziemy na oględziny i przygotujemy kosztorys. Wszystko bez opłat.</p>
       </div>
       <div class="final-actions">
-        <a class="btn btn-sand" href="#wycena">Przejdź do kalkulatora <svg width="18" height="18"><use href="#i-arrow"/></svg></a>
+        <a class="btn btn-sand" href="#wycena">Poproś o darmową wycenę <svg width="18" height="18"><use href="#i-arrow"/></svg></a>
         <div class="contact-card">
           <dl>
             <div><dt>Telefon</dt><dd><span id="tel">+48 500 000 000</span><button class="copy" type="button" data-copy="tel">Kopiuj</button></dd></div>
@@ -427,7 +425,7 @@
 
 <div class="mobile-cta" id="mobile-cta">
   <a class="btn btn-ghost-light" href="tel:+48500000000"><svg width="18" height="18"><use href="#i-phone"/></svg>Zadzwoń</a>
-  <a class="btn btn-sand" href="#wycena">Wyceń remont</a>
+  <a class="btn btn-sand" href="#wycena">Darmowa wycena</a>
 </div>
 
 <script src="cookies.js"></script>
