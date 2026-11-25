@@ -4,347 +4,104 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="robots" content="noindex">
+<meta name="theme-color" content="#15181B">
+<title>Świetlicki Wykończenia — remonty i wykończenia wnętrz w Trójmieście</title>
+<meta name="description" content="Wykańczanie mieszkań, remonty łazienek, adaptacje strychów i klatek schodowych w Gdańsku, Gdyni i Sopocie. Stała cena w umowie, 24 miesiące gwarancji. Wycena online w 60 sekund.">
 <meta property="og:title" content="Świetlicki Wykończenia">
-<meta property="og:description" content="Wykańczanie mieszkań, łazienek, strychów i klatek schodowych w Trójmieście. Wycena online w 60 sekund.">
+<meta property="og:description" content="Remonty i wykończenia wnętrz w Trójmieście. Wycena online w 60 sekund.">
 <meta property="og:type" content="website">
-<title>Świetlicki Wykończenia</title>
-<meta name="claude:viewport-fit-sides" content="cover">
-<meta name="description" content="Świetlicki Wykończenia — wykańczanie mieszkań, remonty łazienek, adaptacje strychów i klatek schodowych w Gdańsku, Gdyni i Sopocie. Wycena online w 60 sekund.">
+<meta property="og:image" content="https://images.unsplash.com/photo-1745429523617-0d837856ca35?auto=format&fit=crop&w=1200&h=630&q=70">
+<link rel="preconnect" href="https://images.unsplash.com">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100,500..800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
-<style>
-/* Układ: granatowy hero z kalkulatorem wyceny (lejek), dalej jasne sekcje na siatce fug; żółty tylko na akcjach */
-:root{
-  --bg:#F3F5F4; --surface:#FFFFFF; --sunk:#E9EDEC; --ink:#13212B; --muted:#56656D; --line:#D5DCDB;
-  --navy:#10212C; --navy-2:#183140; --on-navy:#E9EFEE; --on-navy-muted:#A6B6BD;
-  --accent:#F2B705; --accent-hover:#FFC51F; --on-accent:#13212B; --sea:#1D5C68; --ok:#2F7D4F;
-  --grout:rgba(19,33,43,.045);
-  --f-display:"Archivo","Helvetica Neue",Arial,sans-serif;
-  --f-body:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
-  --f-mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
-  --r:6px; --r-lg:10px; --max:1200px;
-  --shadow:0 1px 2px rgba(16,33,44,.06),0 8px 28px rgba(16,33,44,.08);
-}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
-  --bg:#0D171E; --surface:#15222B; --sunk:#111D25; --ink:#E6ECEB; --muted:#97A7AE; --line:#263843;
-  --navy:#0A141A; --navy-2:#13232D; --sea:#7DBDC9; --ok:#5DBB83; --grout:rgba(230,236,235,.04);
-  --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 28px rgba(0,0,0,.35); color-scheme:dark}}
-:root[data-theme="dark"]{
-  --bg:#0D171E; --surface:#15222B; --sunk:#111D25; --ink:#E6ECEB; --muted:#97A7AE; --line:#263843;
-  --navy:#0A141A; --navy-2:#13232D; --sea:#7DBDC9; --ok:#5DBB83; --grout:rgba(230,236,235,.04);
-  --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 28px rgba(0,0,0,.35); color-scheme:dark}
-
-*{box-sizing:border-box}
-[hidden]{display:none!important}
-html{scroll-behavior:smooth;scroll-padding-top:84px}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
-body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:1rem;line-height:1.6;-webkit-font-smoothing:antialiased;
-  background-image:linear-gradient(var(--grout) 1px,transparent 1px),linear-gradient(90deg,var(--grout) 1px,transparent 1px);background-size:48px 48px}
-body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:40;background:var(--navy)}
-a{color:inherit}
-:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
-.wrap{max-width:var(--max);margin-inline:auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
-h1,h2,h3{font-family:var(--f-display);line-height:1.08;text-wrap:balance;margin:0;letter-spacing:-.015em;font-stretch:100%}
-h2{font-size:clamp(1.9rem,3.6vw,2.75rem);font-weight:800}
-h3{font-size:1.2rem;font-weight:700}
-p{margin:0}
-.eyebrow{font-family:var(--f-mono);font-size:.76rem;letter-spacing:.12em;text-transform:uppercase;color:var(--sea);font-weight:500}
-section{padding-block:clamp(4rem,8vw,6.5rem)}
-.sec-head{display:grid;gap:.85rem;max-width:42rem;margin-bottom:2.75rem}
-.sec-head p{color:var(--muted);font-size:1.08rem}
-.center{margin-inline:auto;text-align:center}
-
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;font-family:var(--f-body);font-weight:600;font-size:1rem;text-decoration:none;
-  padding:.85rem 1.3rem;border-radius:var(--r);border:1.5px solid transparent;cursor:pointer;transition:background .15s,transform .15s,border-color .15s;line-height:1.2}
-.btn-primary{background:var(--accent);color:var(--on-accent)}
-.btn-primary:hover{background:var(--accent-hover)}
-.btn-primary:active{transform:translateY(1px)}
-.btn-line{background:transparent;color:var(--ink);border-color:var(--line)}
-.btn-line:hover{border-color:var(--ink)}
-.btn-lg{padding:1rem 1.6rem;font-size:1.05rem}
-
-/* header */
-header{position:sticky;top:env(safe-area-inset-top,0px);z-index:30;background:var(--navy);color:var(--on-navy);border-bottom:1px solid rgba(255,255,255,.08)}
-.nav{display:flex;align-items:center;justify-content:space-between;gap:1.25rem;padding-block:.8rem}
-.logo{display:flex;align-items:center;gap:.7rem;text-decoration:none;line-height:1.05}
-.logo-mark{width:38px;height:38px;flex:none;border-radius:6px;background:var(--accent);color:var(--on-accent);display:grid;place-items:center;
-  font-family:var(--f-display);font-weight:800;font-size:1.05rem;letter-spacing:-.02em}
-.logo b{display:block;font-family:var(--f-display);font-weight:800;font-size:1.12rem;letter-spacing:-.01em}
-.logo small{display:block;font-family:var(--f-mono);font-size:.64rem;letter-spacing:.14em;color:var(--on-navy-muted);text-transform:uppercase}
-.nav ul{display:flex;gap:1.6rem;list-style:none;margin:0;padding:0;font-size:.94rem}
-.nav ul a{text-decoration:none;color:var(--on-navy-muted)}
-.nav ul a:hover{color:var(--on-navy)}
-.nav-right{display:flex;align-items:center;gap:1rem}
-.nav-phone{font-family:var(--f-mono);font-size:.9rem;color:var(--on-navy);white-space:nowrap}
-.nav-phone span{display:block;font-size:.64rem;letter-spacing:.12em;color:var(--on-navy-muted);text-transform:uppercase}
-.nav .btn{padding:.6rem 1rem;font-size:.92rem}
-@media (max-width:1020px){.nav ul{display:none}}
-@media (max-width:640px){.nav-phone,.nav .btn{display:none}}
-
-/* hero */
-.hero{background:var(--navy);color:var(--on-navy);position:relative;overflow:hidden;padding-block:clamp(2.75rem,6vw,5rem) clamp(3rem,7vw,5.5rem)}
-.hero::before{content:"";position:absolute;inset:0;pointer-events:none;
-  background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:48px 48px;
-  mask-image:linear-gradient(90deg,#000 0%,transparent 70%)}
-.hero-grid{position:relative;display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(2rem,5vw,4.5rem);align-items:start}
-.hero-grid>*{min-width:0}
-@media (max-width:960px){.hero-grid{grid-template-columns:1fr}}
-.hero .eyebrow{color:var(--accent)}
-.hero h1{font-size:clamp(2.4rem,5.4vw,4.25rem);font-weight:800;letter-spacing:-.025em;margin-top:1rem;line-height:1.02}
-.hero h1 em{font-style:normal;color:var(--accent)}
-.hero .lead{font-size:clamp(1.05rem,1.5vw,1.2rem);color:var(--on-navy-muted);max-width:34rem;margin-top:1.3rem}
-.checks{list-style:none;margin:1.75rem 0 0;padding:0;display:grid;gap:.7rem}
-.checks li{display:flex;gap:.7rem;align-items:flex-start}
-.checks svg{flex:none;margin-top:.2rem}
-.hero-meta{display:flex;flex-wrap:wrap;gap:1.25rem 2rem;margin-top:2.25rem;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,.1)}
-.hero-meta div{display:grid;gap:.1rem}
-.hero-meta b{font-family:var(--f-display);font-size:1.4rem;font-weight:800}
-.hero-meta span{font-size:.85rem;color:var(--on-navy-muted)}
-
-/* kalkulator / lejek */
-.quiz{background:var(--surface);color:var(--ink);border-radius:var(--r-lg);box-shadow:0 20px 60px rgba(0,0,0,.35);overflow:hidden}
-.quiz-head{padding:1.25rem 1.5rem 1rem;border-bottom:1px solid var(--line);display:grid;gap:.75rem}
-.quiz-title{display:flex;justify-content:space-between;align-items:baseline;gap:1rem}
-.quiz-title h2{font-size:1.25rem;font-weight:800}
-.quiz-step{font-family:var(--f-mono);font-size:.78rem;color:var(--muted);white-space:nowrap}
-.bar{height:4px;background:var(--sunk);border-radius:99px;overflow:hidden}
-.bar i{display:block;height:100%;width:20%;background:var(--accent);transition:width .3s}
-.quiz-body{padding:1.5rem}
-.q{display:grid;gap:1rem}
-.q-label{font-weight:600;font-size:1.05rem}
-.q-hint{font-size:.88rem;color:var(--muted);margin-top:-.6rem}
-.tiles{display:grid;grid-template-columns:1fr 1fr;gap:.7rem}
-.tile{position:relative;display:grid;gap:.25rem;text-align:left;padding:1rem;border:1.5px solid var(--line);border-radius:var(--r);background:var(--surface);color:var(--ink);
-  font:inherit;cursor:pointer;transition:border-color .15s,background .15s}
-.tile:hover{border-color:var(--muted)}
-.tile[aria-pressed="true"]{border-color:var(--ink);background:var(--sunk)}
-.tile[aria-pressed="true"]::after{content:"";position:absolute;top:.7rem;right:.7rem;width:10px;height:10px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 3px var(--surface)}
-.tile b{font-weight:600}
-.tile span{font-size:.82rem;color:var(--muted)}
-.tile svg{margin-bottom:.35rem;color:var(--sea)}
-.tiles.three{grid-template-columns:repeat(3,1fr)}
-@media (max-width:480px){.tiles.three{grid-template-columns:1fr}}
-.range-row{display:flex;align-items:center;gap:1rem}
-.range-row input[type=range]{flex:1;accent-color:var(--accent);min-width:0}
-.num-out{font-family:var(--f-mono);font-size:1.4rem;font-weight:500;min-width:6.5ch;text-align:right;font-variant-numeric:tabular-nums}
-label{display:grid;gap:.35rem;font-size:.88rem;font-weight:500}
-input[type=text],input[type=tel],select,textarea{font:inherit;font-size:1rem;color:var(--ink);background:var(--surface);border:1.5px solid var(--line);border-radius:var(--r);padding:.75rem .85rem;width:100%;min-width:0}
-input:focus,select:focus,textarea:focus{outline:none;border-color:var(--ink);box-shadow:0 0 0 3px color-mix(in srgb,var(--accent) 45%,transparent)}
-.row{display:grid;grid-template-columns:1fr 1fr;gap:.8rem}
-@media (max-width:480px){.row{grid-template-columns:1fr}}
-.quiz-foot{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:1rem 1.5rem;border-top:1px solid var(--line);background:var(--sunk)}
-.link-btn{background:none;border:0;font:inherit;color:var(--muted);cursor:pointer;padding:.5rem 0;text-decoration:underline;text-underline-offset:3px}
-.link-btn:disabled{visibility:hidden}
-.estimate{background:var(--navy);color:var(--on-navy);border-radius:var(--r);padding:1.1rem 1.2rem;display:grid;gap:.3rem}
-.estimate small{font-family:var(--f-mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--on-navy-muted)}
-.estimate b{font-family:var(--f-display);font-size:clamp(1.6rem,4vw,2.1rem);font-weight:800;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
-.estimate span{font-size:.84rem;color:var(--on-navy-muted)}
-.consent{display:flex;gap:.6rem;align-items:flex-start;font-weight:400;font-size:.8rem;color:var(--muted)}
-.consent input{margin-top:.2rem;accent-color:var(--ink)}
-.err{font-size:.88rem;color:#B3261E;min-height:1.2em}
-:root[data-theme="dark"] .err{color:#FF8A80}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .err{color:#FF8A80}}
-.done{display:grid;gap:1rem;text-align:left}
-.done-icon{width:48px;height:48px;border-radius:50%;background:color-mix(in srgb,var(--ok) 16%,transparent);color:var(--ok);display:grid;place-items:center}
-.next-steps{list-style:none;margin:0;padding:0;display:grid;gap:.6rem;font-size:.95rem}
-.next-steps li{display:grid;grid-template-columns:auto 1fr;gap:.7rem}
-.next-steps li span{font-family:var(--f-mono);font-size:.78rem;color:var(--sea);padding-top:.15rem}
-.secure{display:flex;gap:.45rem;align-items:center;font-size:.78rem;color:var(--muted)}
-
-/* trust */
-.trust{background:var(--surface);border-bottom:1px solid var(--line)}
-.trust .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
-.trust .item{display:flex;gap:.85rem;align-items:center;padding:1.35rem 1rem;border-left:1px solid var(--line)}
-.trust .item:first-child{border-left:0;padding-left:0}
-.trust svg{flex:none;color:var(--sea)}
-.trust b{display:block;font-weight:600;font-size:.97rem}
-.trust span{font-size:.85rem;color:var(--muted)}
-@media (max-width:900px){.trust .wrap{grid-template-columns:1fr 1fr}.trust .item:nth-child(3){border-left:0;padding-left:0}.trust .item:nth-child(n+3){border-top:1px solid var(--line)}}
-@media (max-width:520px){.trust .wrap{grid-template-columns:1fr}.trust .item{border-left:0!important;padding-left:0;border-top:1px solid var(--line)}.trust .item:first-child{border-top:0}}
-
-/* problem / rozwiązanie */
-.pains{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
-@media (max-width:860px){.pains{grid-template-columns:1fr}}
-.pain{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);overflow:hidden;display:grid;grid-template-rows:auto 1fr}
-.pain .p-q{padding:1.3rem 1.4rem;border-bottom:1px dashed var(--line);display:grid;gap:.35rem}
-.pain .p-q small{font-family:var(--f-mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
-.pain .p-q p{font-weight:600;font-size:1.05rem}
-.pain .p-a{padding:1.3rem 1.4rem;display:grid;gap:.35rem;background:var(--sunk);align-content:start}
-.pain .p-a small{font-family:var(--f-mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ok)}
-.pain .p-a p{color:var(--ink);font-size:.95rem}
-
-/* usługi */
-.services{display:grid;grid-template-columns:repeat(4,1fr);gap:1.1rem}
-@media (max-width:1060px){.services{grid-template-columns:1fr 1fr}}
-@media (max-width:560px){.services{grid-template-columns:1fr}}
-.svc{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);padding:1.5rem;display:grid;gap:.9rem;grid-template-rows:auto auto auto 1fr auto;min-width:0;transition:box-shadow .2s,border-color .2s}
-.svc:hover{box-shadow:var(--shadow);border-color:transparent}
-.svc-ic{width:44px;height:44px;border-radius:8px;background:var(--sunk);display:grid;place-items:center;color:var(--sea)}
-.svc p{color:var(--muted);font-size:.95rem}
-.svc ul{margin:0;padding:0;list-style:none;display:grid;gap:.4rem;font-size:.9rem}
-.svc li{padding-left:1.1rem;position:relative}
-.svc li::before{content:"";position:absolute;left:0;top:.65em;width:.5rem;height:2px;background:var(--accent)}
-.svc-foot{display:grid;gap:.75rem;border-top:1px solid var(--line);padding-top:1rem}
-.svc-foot .mono{font-family:var(--f-mono);font-size:.78rem;color:var(--muted)}
-.svc-foot .mono b{color:var(--ink);font-weight:500}
-.svc .btn{width:100%;padding:.7rem 1rem;font-size:.92rem}
-
-/* proces */
-.process-band{background:var(--surface);border-block:1px solid var(--line)}
-.process{display:grid;grid-template-columns:repeat(5,1fr);gap:0;counter-reset:step;list-style:none;margin:0;padding:0}
-@media (max-width:980px){.process{grid-template-columns:1fr}}
-.step{padding:1.4rem 1.2rem 1.4rem 0;border-top:2px solid var(--ink);display:grid;gap:.5rem;align-content:start}
-@media (min-width:981px){.step+.step{padding-left:1.2rem;border-left:1px solid var(--line)}}
-@media (max-width:980px){.step{grid-template-columns:3rem 1fr;column-gap:.5rem}.step>*:not(.n){grid-column:2}}
-.step .n{font-family:var(--f-mono);font-size:.8rem;color:var(--sea)}
-.step::before{counter-increment:step}
-.step p{color:var(--muted);font-size:.93rem}
-.tag{font-family:var(--f-mono);font-size:.74rem;justify-self:start;padding:.15rem .5rem;border-radius:3px;background:color-mix(in srgb,var(--accent) 28%,transparent);color:var(--ink)}
-
-/* o firmie */
-.about{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(2rem,5vw,4rem);align-items:center}
-.about>*{min-width:0}
-@media (max-width:860px){.about{grid-template-columns:1fr}}
-.portrait{aspect-ratio:4/5;max-width:100%;border-radius:var(--r-lg);background:var(--navy);position:relative;overflow:hidden;display:grid;place-items:center}
-.portrait img{width:100%;height:100%;object-fit:cover}
-.portrait .mono-big{font-family:var(--f-display);font-weight:800;font-size:clamp(5rem,14vw,8rem);color:var(--accent);letter-spacing:-.04em}
-.portrait .cap{position:absolute;left:1rem;bottom:1rem;right:1rem;font-family:var(--f-mono);font-size:.74rem;color:var(--on-navy-muted)}
-.about-text{display:grid;gap:1.1rem}
-.about-text p{color:var(--muted);font-size:1.05rem;max-width:38rem}
-.quote{font-family:var(--f-display);font-size:clamp(1.25rem,2.2vw,1.6rem);font-weight:700;line-height:1.3;color:var(--ink);border-left:3px solid var(--accent);padding-left:1.1rem;max-width:36rem}
-.sign{font-family:var(--f-mono);font-size:.85rem;color:var(--muted)}
-
-/* typowe zlecenia */
-.works{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
-@media (max-width:900px){.works{grid-template-columns:1fr 1fr}}
-@media (max-width:560px){.works{grid-template-columns:1fr}}
-.work{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);overflow:hidden;display:grid;min-width:0}
-.ph{aspect-ratio:16/10;max-width:100%;position:relative;overflow:hidden}
-.ph img{width:100%;height:100%;object-fit:cover;display:block}
-.ph.t1{background:var(--sunk);background-image:linear-gradient(var(--line) 2px,transparent 2px),linear-gradient(90deg,var(--line) 2px,transparent 2px);background-size:56px 112px}
-.ph.t2{background:var(--navy-2);background-image:linear-gradient(90deg,rgba(255,255,255,.07) 50%,transparent 50%);background-size:44px 100%}
-.ph.t3{background:var(--sunk);background-image:repeating-linear-gradient(45deg,var(--line) 0 2px,transparent 2px 20px)}
-.work-b{padding:1.2rem 1.3rem 1.4rem;display:grid;gap:.45rem}
-.work-b p{color:var(--muted);font-size:.93rem}
-.work-b .spec{font-family:var(--f-mono);font-size:.78rem;color:var(--sea)}
-
-/* cennik */
-.price-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:var(--r-lg);background:var(--surface)}
-table{width:100%;border-collapse:collapse;min-width:540px}
-th,td{text-align:left;padding:.95rem 1.2rem;border-bottom:1px solid var(--line);vertical-align:top}
-th{font-family:var(--f-mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:500;background:var(--sunk)}
-td.num,th.num{text-align:right}
-td.num{font-family:var(--f-mono);font-variant-numeric:tabular-nums;white-space:nowrap;font-weight:500}
-td.unit{font-family:var(--f-mono);font-size:.85rem;color:var(--muted);white-space:nowrap}
-tr:last-child td{border-bottom:0}
-td small{display:block;color:var(--muted);font-size:.85rem}
-.price-foot{display:flex;justify-content:space-between;align-items:center;gap:1rem 2rem;flex-wrap:wrap;margin-top:1.25rem}
-.price-foot p{color:var(--muted);font-size:.9rem;max-width:44rem}
-
-/* gwarancja */
-.guarantee{background:var(--navy);color:var(--on-navy);border-radius:var(--r-lg);padding:clamp(1.75rem,4vw,2.75rem);display:grid;grid-template-columns:auto 1fr;gap:1.5rem 2rem;align-items:center}
-@media (max-width:640px){.guarantee{grid-template-columns:1fr}}
-.seal{width:96px;height:96px;border-radius:50%;border:2px solid var(--accent);display:grid;place-items:center;text-align:center;font-family:var(--f-mono);font-size:.68rem;letter-spacing:.08em;color:var(--accent);line-height:1.2}
-.seal b{display:block;font-family:var(--f-display);font-size:1.7rem;letter-spacing:-.02em}
-.guarantee h2{font-size:clamp(1.5rem,2.8vw,2rem)}
-.guarantee p{color:var(--on-navy-muted);margin-top:.6rem;max-width:44rem}
-
-/* faq */
-.faq-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(2rem,5vw,4rem)}
-.faq-grid>*{min-width:0}
-@media (max-width:860px){.faq-grid{grid-template-columns:1fr}}
-.faq{border-top:1px solid var(--line)}
-details{border-bottom:1px solid var(--line)}
-summary{cursor:pointer;list-style:none;padding:1.15rem 2.5rem 1.15rem 0;font-weight:600;font-size:1.03rem;position:relative}
-summary::-webkit-details-marker{display:none}
-summary::after{content:"";position:absolute;right:.4rem;top:50%;width:10px;height:10px;border-right:2px solid var(--muted);border-bottom:2px solid var(--muted);transform:translateY(-70%) rotate(45deg);transition:transform .2s}
-details[open] summary::after{transform:translateY(-30%) rotate(-135deg)}
-details p{padding:0 0 1.25rem;color:var(--muted);max-width:44rem}
-
-/* final cta */
-.final{background:var(--navy);color:var(--on-navy)}
-.final-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:2rem 4rem;align-items:center}
-.final-grid>*{min-width:0}
-@media (max-width:860px){.final-grid{grid-template-columns:1fr}}
-.final h2{font-size:clamp(2rem,4vw,3rem)}
-.final p{color:var(--on-navy-muted);font-size:1.1rem;margin-top:1rem;max-width:34rem}
-.final-actions{display:grid;gap:1rem}
-.contact-card{border:1px solid rgba(255,255,255,.12);border-radius:var(--r-lg);padding:1.25rem 1.4rem;display:grid;gap:.9rem}
-.contact-card dt{font-family:var(--f-mono);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--on-navy-muted)}
-.contact-card dd{margin:0;font-size:1.08rem;font-weight:500;overflow-wrap:anywhere;user-select:all}
-.contact-card dl{margin:0;display:grid;gap:.9rem}
-.copy{font-family:var(--f-mono);font-size:.72rem;background:transparent;color:var(--accent);border:1px solid color-mix(in srgb,var(--accent) 60%,transparent);border-radius:3px;padding:.12rem .45rem;margin-left:.5rem;cursor:pointer;vertical-align:middle;user-select:none}
-
-footer{background:var(--navy);color:var(--on-navy-muted);border-top:1px solid rgba(255,255,255,.08)}
-footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:.75rem 2rem;padding-block:1.6rem;font-size:.82rem}
-
-.mobile-cta{display:none}
-@media (max-width:640px){
-  .mobile-cta{display:flex;gap:.6rem;position:fixed;left:0;right:0;bottom:0;z-index:35;background:var(--navy);border-top:1px solid rgba(255,255,255,.1);
-    padding:.6rem max(12px,env(safe-area-inset-right,0px)) calc(.6rem + env(safe-area-inset-bottom,0px)) max(12px,env(safe-area-inset-left,0px))}
-  .mobile-cta a{flex:1;padding:.8rem;font-size:.95rem}
-  .mobile-cta .btn-line{color:var(--on-navy);border-color:rgba(255,255,255,.3)}
-  footer .wrap{padding-bottom:5.5rem}
-}
-</style>
-<style>body{margin:0}img{max-width:100%}</style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400;500&family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
-  <symbol id="i-check" viewBox="0 0 20 20"><circle cx="10" cy="10" r="10" fill="#F2B705"/><path d="M6 10.3l2.6 2.6L14.2 7.3" fill="none" stroke="#13212B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
-  <symbol id="i-home" viewBox="0 0 24 24"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
-  <symbol id="i-bath" viewBox="0 0 24 24"><path d="M4 12h16v3a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5zM6 12V6a2 2 0 0 1 4 0M7 20l-1 2M17 20l1 2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
-  <symbol id="i-roof" viewBox="0 0 24 24"><path d="M2 20L12 5l10 15M6 20v-4h5v4M15 12h3v3h-3z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
-  <symbol id="i-stairs" viewBox="0 0 24 24"><path d="M3 21h5v-5h5v-5h5V6h3M3 21V3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
-  <symbol id="i-doc" viewBox="0 0 24 24"><path d="M7 3h7l5 5v13H7zM14 3v5h5M10 13h6M10 17h6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
-  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6z M8.5 12l2.5 2.5 4.5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/></symbol>
-  <symbol id="i-cal" viewBox="0 0 24 24"><path d="M4 6h16v15H4zM4 10h16M8 3v5M16 3v5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
-  <symbol id="i-cam" viewBox="0 0 24 24"><path d="M3 8h4l2-3h6l2 3h4v12H3z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><circle cx="12" cy="13.5" r="3.5" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
-  <symbol id="i-lock" viewBox="0 0 24 24"><path d="M6 11h12v10H6zM8.5 11V8a3.5 3.5 0 0 1 7 0v3" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 20 20"><path d="M4 10h11M11 5.5l4.5 4.5-4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 20 20"><path d="M6.6 2.8l2 3.2-1.6 1.6a10 10 0 0 0 5.4 5.4l1.6-1.6 3.2 2-1 2.8c-6.6.4-12.4-5.4-12-12z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+  <symbol id="i-check" viewBox="0 0 20 20"><path d="M4.5 10.5l3.5 3.5 7.5-8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-home" viewBox="0 0 24 24"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+  <symbol id="i-bath" viewBox="0 0 24 24"><path d="M4 12h16v3a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5zM6 12V6a2 2 0 0 1 4 0M7 20l-1 2M17 20l1 2" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-roof" viewBox="0 0 24 24"><path d="M2 20L12 5l10 15M6 20v-4h5v4M15 12h3v3h-3z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-stairs" viewBox="0 0 24 24"><path d="M3 21h5v-5h5v-5h5V6h3M3 21V3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24"><path d="M7 3h7l5 5v13H7zM14 3v5h5M10 13h6M10 17h6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6z M8.5 12l2.5 2.5 4.5-5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/></symbol>
+  <symbol id="i-cal" viewBox="0 0 24 24"><path d="M4 6h16v15H4zM4 10h16M8 3v5M16 3v5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+  <symbol id="i-cam" viewBox="0 0 24 24"><path d="M3 8h4l2-3h6l2 3h4v12H3z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><circle cx="12" cy="13.5" r="3.5" fill="none" stroke="currentColor" stroke-width="1.6"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24"><path d="M6 11h12v10H6zM8.5 11V8a3.5 3.5 0 0 1 7 0v3" fill="none" stroke="currentColor" stroke-width="1.6"/></symbol>
 </svg>
 
-<header>
-  <div class="wrap nav">
+<header class="site-head" id="head">
+  <div class="wrap head-row">
     <a class="logo" href="#top" aria-label="Świetlicki Wykończenia — strona główna">
       <span class="logo-mark" aria-hidden="true">IŚ</span>
-      <span><b>Świetlicki</b><small>Wykończenia · Trójmiasto</small></span>
+      <span class="logo-text"><b>Świetlicki</b><small>Wykończenia</small></span>
     </a>
-    <ul>
-      <li><a href="#uslugi">Usługi</a></li>
-      <li><a href="#proces">Jak pracujemy</a></li>
-      <li><a href="#o-firmie">O firmie</a></li>
-      <li><a href="#cennik">Cennik</a></li>
-      <li><a href="#faq">Pytania</a></li>
-    </ul>
-    <div class="nav-right">
-      <div class="nav-phone"><span>Zadzwoń</span>+48 500 000 000</div>
-      <a class="btn btn-primary" href="#wycena">Wyceń remont</a>
-    </div>
+    <nav class="nav" aria-label="Główna nawigacja">
+      <ul>
+        <li><a href="#uslugi">Usługi</a></li>
+        <li><a href="#pakiety">Pakiety</a></li>
+        <li><a href="#proces">Jak pracujemy</a></li>
+        <li><a href="#o-firmie">O firmie</a></li>
+        <li><a href="#faq">Pytania</a></li>
+      </ul>
+      <div class="head-actions">
+        <a class="phone-pill" href="tel:+48500000000"><span>500 000 000</span><i><svg width="16" height="16"><use href="#i-phone"/></svg></i></a>
+        <a class="btn btn-sand" href="#wycena">Wyceń remont</a>
+        <button class="burger" type="button" id="burger" aria-label="Otwórz menu" aria-expanded="false" aria-controls="drawer"><span></span></button>
+      </div>
+    </nav>
   </div>
 </header>
 
+<div class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="Menu">
+  <div class="drawer-top">
+    <span class="logo"><span class="logo-mark" aria-hidden="true">IŚ</span><span class="logo-text"><b>Świetlicki</b><small>Wykończenia</small></span></span>
+    <button class="close-x" type="button" id="drawer-close" aria-label="Zamknij menu">×</button>
+  </div>
+  <nav aria-label="Menu mobilne">
+    <a href="#uslugi">Usługi</a>
+    <a href="#pakiety">Pakiety</a>
+    <a href="#proces">Jak pracujemy</a>
+    <a href="#o-firmie">O firmie</a>
+    <a href="#cennik">Cennik</a>
+    <a href="#faq">Pytania</a>
+  </nav>
+  <div class="drawer-foot">
+    <a class="phone-pill" href="tel:+48500000000"><span>+48 500 000 000</span><i><svg width="16" height="16"><use href="#i-phone"/></svg></i></a>
+    <a class="btn btn-sand btn-block" href="#wycena">Wyceń remont w 60 sekund</a>
+  </div>
+</div>
+
 <main id="top">
   <section class="hero">
+    <div class="hero-bg" aria-hidden="true">
+      <img src="https://images.unsplash.com/photo-1745429523617-0d837856ca35?auto=format&fit=crop&w=1920&q=70"
+           srcset="https://images.unsplash.com/photo-1745429523617-0d837856ca35?auto=format&fit=crop&w=800&q=65 800w,
+                   https://images.unsplash.com/photo-1745429523617-0d837856ca35?auto=format&fit=crop&w=1400&q=70 1400w,
+                   https://images.unsplash.com/photo-1745429523617-0d837856ca35?auto=format&fit=crop&w=1920&q=70 1920w"
+           sizes="100vw" alt="" fetchpriority="high">
+    </div>
     <div class="wrap hero-grid">
-      <div>
-        <span class="eyebrow">Gdańsk · Gdynia · Sopot i okolice</span>
-        <h1>Remont z jedną ekipą, <em>stałą ceną</em> i&nbsp;terminem w&nbsp;umowie.</h1>
-        <p class="lead">Wykańczamy mieszkania, remontujemy łazienki, adaptujemy strychy i odnawiamy klatki schodowe. Firmę prowadzi Irek Świetlicki i to on przyjeżdża na wycenę.</p>
-        <ul class="checks">
-          <li><svg width="20" height="20"><use href="#i-check"/></svg><span>Pisemny kosztorys w 48 godzin po oględzinach</span></li>
-          <li><svg width="20" height="20"><use href="#i-check"/></svg><span>Cena z umowy zmienia się tylko, gdy zmienisz zakres</span></li>
-          <li><svg width="20" height="20"><use href="#i-check"/></svg><span>Zdjęcia z postępu prac co tydzień, 24 miesiące gwarancji</span></li>
-        </ul>
-        <div class="hero-meta">
-          <div><b>60 s</b><span>orientacyjna wycena online</span></div>
-          <div><b>0 zł</b><span>oględziny na miejscu</span></div>
+      <div class="hero-text">
+        <span class="eyebrow">Gdańsk · Gdynia · Sopot</span>
+        <h1>Wykończenie wnętrz <strong>bez niespodzianek</strong> w&nbsp;kosztorysie</h1>
+        <p class="lead">Mieszkania pod klucz, łazienki, strychy i klatki schodowe. Jedna stała ekipa, cena zapisana w umowie i Irek Świetlicki osobiście na każdej wycenie.</p>
+        <div class="hero-cta">
+          <a class="btn btn-sand" href="#wycena">Wyceń remont online <svg width="18" height="18"><use href="#i-arrow"/></svg></a>
+          <a class="btn btn-ghost-light" href="tel:+48500000000"><svg width="18" height="18"><use href="#i-phone"/></svg>Zadzwoń</a>
+        </div>
+        <div class="hero-points">
+          <div><b>24 mies.</b><span>gwarancji na robociznę</span></div>
+          <div><b>48 h</b><span>na pisemny kosztorys</span></div>
           <div><b>VAT 8%</b><span>w lokalach mieszkalnych</span></div>
         </div>
       </div>
 
-      <!-- LEJEK: kalkulator wyceny. Wysyłka: wpisz adres endpointu w data-endpoint -->
+      <!-- LEJEK: kalkulator wyceny. Wysyłka: wpisz adres w data-endpoint, np. https://formsubmit.co/ajax/twoj@email.pl -->
       <div class="quiz" id="wycena" data-endpoint="">
         <div class="quiz-head">
           <div class="quiz-title"><h2>Wycena w 60 sekund</h2><span class="quiz-step" id="q-step">Krok 1 z 4</span></div>
@@ -360,7 +117,6 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:.75re
               <button type="button" class="tile" data-k="type" data-v="klatka" aria-pressed="false"><svg width="24" height="24"><use href="#i-stairs"/></svg><b>Klatka schodowa</b><span>dla wspólnoty</span></button>
             </div>
           </div>
-
           <div class="q" data-step="2" hidden>
             <p class="q-label" id="size-label">Jaki metraż?</p>
             <p class="q-hint" id="size-hint">Wystarczy orientacyjnie.</p>
@@ -372,48 +128,45 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:.75re
               <select id="q-city"><option>Gdańsk</option><option>Gdynia</option><option>Sopot</option><option>Rumia / Reda</option><option>Pruszcz Gd. / Żukowo</option><option>Inna miejscowość</option></select>
             </label>
           </div>
-
           <div class="q" data-step="3" hidden>
             <p class="q-label">Jaki standard wykończenia?</p>
             <div class="tiles three" role="group" aria-label="Standard">
-              <button type="button" class="tile" data-k="std" data-v="0" aria-pressed="false"><b>Podstawowy</b><span>solidnie, bez dodatków</span></button>
-              <button type="button" class="tile" data-k="std" data-v="1" aria-pressed="true"><b>Średni</b><span>najczęściej wybierany</span></button>
-              <button type="button" class="tile" data-k="std" data-v="2" aria-pressed="false"><b>Wysoki</b><span>duże formaty, zabudowy</span></button>
+              <button type="button" class="tile" data-k="std" data-v="0" aria-pressed="false"><b>Standard</b><span>solidnie, bez dodatków</span></button>
+              <button type="button" class="tile" data-k="std" data-v="1" aria-pressed="true"><b>Komfort</b><span>najczęściej wybierany</span></button>
+              <button type="button" class="tile" data-k="std" data-v="2" aria-pressed="false"><b>Premium</b><span>duże formaty, zabudowy</span></button>
             </div>
             <label for="q-when">Kiedy chcesz zacząć?
               <select id="q-when"><option>Jak najszybciej</option><option selected>W ciągu 1–3 miesięcy</option><option>Za 3–6 miesięcy</option><option>Jeszcze nie wiem</option></select>
             </label>
           </div>
-
           <div class="q" data-step="4" hidden>
             <div class="estimate" aria-live="polite">
               <small>Orientacyjny koszt robocizny</small>
               <b id="q-est">—</b>
               <span id="q-est-note">netto, bez materiałów</span>
             </div>
-            <p class="q-hint" style="margin-top:0">Zostaw numer, a Irek oddzwoni, doprecyzuje zakres i umówi bezpłatne oględziny.</p>
+            <p class="q-hint" style="margin-top:0">Zostaw numer. Irek oddzwoni, doprecyzuje zakres i umówi bezpłatne oględziny.</p>
             <div class="row">
               <label for="q-name">Imię<input type="text" id="q-name" autocomplete="given-name"></label>
               <label for="q-phone">Telefon<input type="tel" id="q-phone" autocomplete="tel" inputmode="tel" placeholder="600 123 456"></label>
             </div>
-            <label class="consent" for="q-rodo"><input type="checkbox" id="q-rodo"> Zgadzam się na kontakt telefoniczny w sprawie wyceny. Dane wykorzystamy tylko w tym celu.</label>
+            <label class="consent" for="q-rodo"><input type="checkbox" id="q-rodo"><span>Zgadzam się na kontakt telefoniczny w sprawie wyceny. Zasady przetwarzania danych opisuje <a href="polityka-prywatnosci.html" target="_blank" rel="noopener">polityka prywatności</a>.</span></label>
             <p class="err" id="q-err" role="alert"></p>
           </div>
-
           <div class="q done" data-step="5" hidden>
-            <div class="done-icon"><svg width="24" height="24" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-            <p class="q-label" id="done-title">Dziękujemy, zgłoszenie przyjęte</p>
-            <ul class="next-steps">
-              <li><span>01</span><p>Oddzwonimy w godzinach pracy, zwykle w ciągu 2 godzin.</p></li>
-              <li><span>02</span><p>Umówimy bezpłatne oględziny w dogodnym terminie.</p></li>
-              <li><span>03</span><p>Pisemny kosztorys dostaniesz do 48 godzin po wizycie.</p></li>
-            </ul>
+            <div class="done-icon"><svg width="26" height="26"><use href="#i-check"/></svg></div>
+            <p class="q-label">Dziękujemy, zgłoszenie przyjęte</p>
+            <ol class="next-steps">
+              <li><p>Oddzwonimy w godzinach pracy, zwykle w ciągu 2 godzin.</p></li>
+              <li><p>Umówimy bezpłatne oględziny w dogodnym terminie.</p></li>
+              <li><p>Pisemny kosztorys dostaniesz do 48 godzin po wizycie.</p></li>
+            </ol>
           </div>
         </div>
         <div class="quiz-foot">
-          <button type="button" class="link-btn" id="q-back" disabled>Wstecz</button>
+          <button type="button" class="text-btn" id="q-back" disabled>← Wstecz</button>
           <span class="secure" id="q-secure" hidden><svg width="14" height="14"><use href="#i-lock"/></svg>Bez spamu i newslettera</span>
-          <button type="button" class="btn btn-primary" id="q-next" disabled>Dalej</button>
+          <button type="button" class="btn btn-dark" id="q-next" disabled>Dalej</button>
         </div>
       </div>
     </div>
@@ -421,77 +174,128 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:.75re
 
   <div class="trust">
     <div class="wrap">
-      <div class="item"><svg width="26" height="26"><use href="#i-doc"/></svg><div><b>Umowa i kosztorys</b><span>przed rozpoczęciem prac</span></div></div>
-      <div class="item"><svg width="26" height="26"><use href="#i-cal"/></svg><div><b>Harmonogram z datami</b><span>termin końca w umowie</span></div></div>
-      <div class="item"><svg width="26" height="26"><use href="#i-cam"/></svg><div><b>Raport co tydzień</b><span>zdjęcia z budowy na telefon</span></div></div>
-      <div class="item"><svg width="26" height="26"><use href="#i-shield"/></svg><div><b>24 mies. gwarancji</b><span>na całą robociznę</span></div></div>
+      <div class="item"><svg width="28" height="28"><use href="#i-doc"/></svg><div><b>Umowa i kosztorys</b><span>przed rozpoczęciem prac</span></div></div>
+      <div class="item"><svg width="28" height="28"><use href="#i-cal"/></svg><div><b>Harmonogram z datami</b><span>termin końca w umowie</span></div></div>
+      <div class="item"><svg width="28" height="28"><use href="#i-cam"/></svg><div><b>Raport co tydzień</b><span>zdjęcia z budowy na telefon</span></div></div>
+      <div class="item"><svg width="28" height="28"><use href="#i-shield"/></svg><div><b>24 mies. gwarancji</b><span>na całą robociznę</span></div></div>
     </div>
   </div>
 
-  <section>
+  <section id="uslugi">
+    <div class="wrap">
+      <div class="sec-head split">
+        <div style="display:grid;gap:1rem">
+          <span class="eyebrow">Usługi</span>
+          <h2>Cztery rodzaje zleceń,<br>jedna stała ekipa</h2>
+        </div>
+        <p style="max-width:28rem">Glazurnik, hydraulik, elektryk i malarz pracują u nas na stałe. Nie zlecamy pracy przypadkowym podwykonawcom.</p>
+      </div>
+      <div class="services">
+        <article class="svc">
+          <div class="svc-img"><img loading="lazy" src="https://images.unsplash.com/photo-1600493505873-cddd69453072?auto=format&fit=crop&w=800&h=600&q=70" alt="Jasny salon z sofą i drewnianym stolikiem"></div>
+          <div class="svc-b">
+            <h3>Wykończenie mieszkań</h3>
+            <p>Od stanu deweloperskiego do wniesienia mebli.</p>
+            <ul><li>gładzie, malowanie, sufity</li><li>podłogi, drzwi, listwy</li><li>elektryka i biały montaż</li></ul>
+            <div class="svc-meta"><span>4–8 tygodni</span><a class="link-arrow" href="#wycena" data-pick="mieszkanie">Wyceń <svg width="16" height="16"><use href="#i-arrow"/></svg></a></div>
+          </div>
+        </article>
+        <article class="svc">
+          <div class="svc-img"><img loading="lazy" src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=800&h=600&q=70" alt="Nowoczesna łazienka z prysznicem i szafką"></div>
+          <div class="svc-b">
+            <h3>Łazienki</h3>
+            <p>Kompleksowo, z hydroizolacją i równą fugą.</p>
+            <ul><li>nowe instalacje i piony</li><li>płytki 60×120 i większe</li><li>odpływ liniowy, walk-in</li></ul>
+            <div class="svc-meta"><span>2–4 tygodnie</span><a class="link-arrow" href="#wycena" data-pick="lazienka">Wyceń <svg width="16" height="16"><use href="#i-arrow"/></svg></a></div>
+          </div>
+        </article>
+        <article class="svc">
+          <div class="svc-img"><img loading="lazy" src="https://images.unsplash.com/photo-1792628953142-b18d6db6d6a2?auto=format&fit=crop&w=800&h=600&q=70" alt="Wykończone poddasze ze skosami i jasną podłogą"></div>
+          <div class="svc-b">
+            <h3>Strychy i poddasza</h3>
+            <p>Ciepły pokój tam, gdzie był nieużywany strych.</p>
+            <ul><li>ocieplenie i paroizolacja</li><li>skosy i ścianki kolankowe</li><li>okna dachowe</li></ul>
+            <div class="svc-meta"><span>3–6 tygodni</span><a class="link-arrow" href="#wycena" data-pick="strych">Wyceń <svg width="16" height="16"><use href="#i-arrow"/></svg></a></div>
+          </div>
+        </article>
+        <article class="svc">
+          <div class="svc-img"><img loading="lazy" src="https://images.unsplash.com/photo-1705922477242-8040f46c946b?auto=format&fit=crop&w=800&h=600&q=70" alt="Jasna klatka schodowa z poręczą"></div>
+          <div class="svc-b">
+            <h3>Klatki schodowe</h3>
+            <p>Dla wspólnot, etapami, bez blokowania przejścia.</p>
+            <ul><li>tynki, malowanie, lamperie</li><li>posadzki i stopnie</li><li>balustrady, oświetlenie</li></ul>
+            <div class="svc-meta"><span>1–3 tygodnie</span><a class="link-arrow" href="#wycena" data-pick="klatka">Wyceń <svg width="16" height="16"><use href="#i-arrow"/></svg></a></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="pakiety" style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Pakiety wykończenia mieszkań</span>
+        <h2>Wybierz standard, my zajmiemy się resztą</h2>
+        <p>Ceny robocizny za m² podłogi. Materiały kupimy z rabatem hurtowni albo pracujemy na Twoich.</p>
+      </div>
+      <div class="packages">
+        <article class="pkg">
+          <h3 class="pkg-name"><b>Standard</b></h3>
+          <p class="pkg-desc">Solidne wykończenie pod wynajem lub na start.</p>
+          <div class="pkg-price"><small>od</small><b>550 zł</b><small>/ m²</small></div>
+          <ul>
+            <li><svg width="16" height="16"><use href="#i-check"/></svg>gładzie i malowanie 2×</li>
+            <li><svg width="16" height="16"><use href="#i-check"/></svg>panele, listwy, drzwi</li>
+            <li><svg width="16" height="16"><use href="#i-check"/></svg>łazienka w płytkach do 60×60</li>
+            <li><svg width="16" height="16"><use href="#i-check"/></svg>biały montaż i osprzęt</li>
+          </ul>
+          <a class="btn btn-line" href="#wycena" data-std="0" data-pick="mieszkanie">Wyceń w Standardzie</a>
+        </article>
+        <article class="pkg best">
+          <span class="pkg-badge">Najczęściej wybierany</span>
+          <h3 class="pkg-name"><b>Komfort</b></h3>
+          <p class="pkg-desc">Mieszkanie do życia na lata, z dopracowanymi detalami.</p>
+          <div class="pkg-price"><small>od</small><b>700 zł</b><small>/ m²</small></div>
+          <ul>
+            <li><svg width="16" height="16"><use href="#i-check"/></svg>wszystko ze Standardu</li>
+            <li><svg width="16" height="16"><use href="#i-check"/></svg>deska winylowa lub drewno</li>
+            <li><svg width="16" height="16"><use href="#i-check"/></svg>płytki 60×120, odpływ liniowy</li>
+            <li><svg width="16" height="16"><use href="#i-check"/></svg>sufity podwieszane, oświetlenie LED</li>
+          </ul>
+          <a class="btn btn-sand" href="#wycena" data-std="1" data-pick="mieszkanie">Wyceń w Komforcie</a>
+        </article>
+        <article class="pkg">
+          <h3 class="pkg-name"><b>Premium</b></h3>
+          <p class="pkg-desc">Wielkie formaty, zabudowy i rozwiązania na wymiar.</p>
+          <div class="pkg-price"><small>od</small><b>900 zł</b><small>/ m²</small></div>
+          <ul>
+            <li><svg width="16" height="16"><use href="#i-check"/></svg>wszystko z Komfortu</li>
+            <li><svg width="16" height="16"><use href="#i-check"/></svg>spieki i płyty wielkoformatowe</li>
+            <li><svg width="16" height="16"><use href="#i-check"/></svg>zabudowy GK, wnęki, podświetlenia</li>
+            <li><svg width="16" height="16"><use href="#i-check"/></svg>drzwi ukryte, listwy przypodłogowe w tynku</li>
+          </ul>
+          <a class="btn btn-line" href="#wycena" data-std="2" data-pick="mieszkanie">Wyceń w Premium</a>
+        </article>
+      </div>
+      <p class="pkg-note">Ceny netto, orientacyjne. Wiążącą kwotę podajemy w pisemnym kosztorysie po bezpłatnych oględzinach.</p>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
     <div class="wrap">
       <div class="sec-head">
         <span class="eyebrow">Dlaczego my</span>
         <h2>Trzy rzeczy, które psują remonty. U nas ich nie ma.</h2>
       </div>
       <div class="pains">
-        <article class="pain">
-          <div class="p-q"><small>Znasz to</small><p>Ekipa znika na tydzień, bo „ma drugą budowę”.</p></div>
-          <div class="p-a"><small>U nas</small><p>Harmonogram z datami etapów jest częścią umowy. Każdy tydzień kończysz z raportem zdjęciowym.</p></div>
-        </article>
-        <article class="pain">
-          <div class="p-q"><small>Znasz to</small><p>Kosztorys rośnie z każdym etapem prac.</p></div>
-          <div class="p-a"><small>U nas</small><p>Stała cena za uzgodniony zakres. Dopłata pojawia się tylko wtedy, gdy sam coś dodasz.</p></div>
-        </article>
-        <article class="pain">
-          <div class="p-q"><small>Znasz to</small><p>Po odbiorze płytki odpadają, a nikt nie odbiera telefonu.</p></div>
-          <div class="p-a"><small>U nas</small><p>Odbiór z protokołem i 24 miesiące gwarancji. Zgłoszoną usterkę obsługujemy w ciągu 7 dni.</p></div>
-        </article>
+        <article class="pain"><p class="q">Ekipa znika na tydzień, bo „ma drugą budowę”.</p><p class="a"><svg width="20" height="20"><use href="#i-check"/></svg><span>Harmonogram z datami etapów jest częścią umowy, a co tydzień dostajesz raport zdjęciowy.</span></p></article>
+        <article class="pain"><p class="q">Kosztorys rośnie z każdym etapem prac.</p><p class="a"><svg width="20" height="20"><use href="#i-check"/></svg><span>Stała cena za uzgodniony zakres. Dopłata pojawia się tylko wtedy, gdy sam coś dodasz.</span></p></article>
+        <article class="pain"><p class="q">Po odbiorze płytki odpadają, a nikt nie odbiera.</p><p class="a"><svg width="20" height="20"><use href="#i-check"/></svg><span>Odbiór z protokołem i 24 miesiące gwarancji. Usterkę obsługujemy w ciągu 7 dni.</span></p></article>
       </div>
     </div>
   </section>
 
-  <section id="uslugi" style="padding-top:0">
-    <div class="wrap">
-      <div class="sec-head">
-        <span class="eyebrow">Usługi</span>
-        <h2>Cztery rodzaje zleceń, jedna stała ekipa</h2>
-        <p>Glazurnik, hydraulik, elektryk i malarz pracują u nas na stałe. Nie zlecamy pracy przypadkowym podwykonawcom.</p>
-      </div>
-      <div class="services">
-        <article class="svc">
-          <div class="svc-ic"><svg width="24" height="24"><use href="#i-home"/></svg></div>
-          <h3>Wykończenie mieszkań</h3>
-          <p>Od stanu deweloperskiego do wniesienia mebli.</p>
-          <ul><li>gładzie, malowanie, sufity</li><li>podłogi, drzwi, listwy</li><li>elektryka i biały montaż</li><li>zabudowy z płyt GK</li></ul>
-          <div class="svc-foot"><span class="mono">zwykle <b>4–8 tygodni</b></span><a class="btn btn-line" href="#wycena" data-pick="mieszkanie">Wyceń mieszkanie</a></div>
-        </article>
-        <article class="svc">
-          <div class="svc-ic"><svg width="24" height="24"><use href="#i-bath"/></svg></div>
-          <h3>Łazienki</h3>
-          <p>Kompleksowo, z hydroizolacją i równą fugą.</p>
-          <ul><li>nowe instalacje i piony</li><li>płytki 60×120 i większe</li><li>odpływ liniowy, walk-in</li><li>stelaże i zabudowy wnęk</li></ul>
-          <div class="svc-foot"><span class="mono">zwykle <b>2–4 tygodnie</b></span><a class="btn btn-line" href="#wycena" data-pick="lazienka">Wyceń łazienkę</a></div>
-        </article>
-        <article class="svc">
-          <div class="svc-ic"><svg width="24" height="24"><use href="#i-roof"/></svg></div>
-          <h3>Strychy i poddasza</h3>
-          <p>Ciepły pokój tam, gdzie był nieużywany strych.</p>
-          <ul><li>ocieplenie i paroizolacja</li><li>skosy i ścianki kolankowe</li><li>okna dachowe</li><li>podłogi i oświetlenie</li></ul>
-          <div class="svc-foot"><span class="mono">zwykle <b>3–6 tygodni</b></span><a class="btn btn-line" href="#wycena" data-pick="strych">Wyceń strych</a></div>
-        </article>
-        <article class="svc">
-          <div class="svc-ic"><svg width="24" height="24"><use href="#i-stairs"/></svg></div>
-          <h3>Klatki schodowe</h3>
-          <p>Dla wspólnot, etapami, bez blokowania przejścia.</p>
-          <ul><li>tynki, malowanie, lamperie</li><li>posadzki i stopnie</li><li>balustrady, oświetlenie</li><li>ogłoszenia dla mieszkańców</li></ul>
-          <div class="svc-foot"><span class="mono">zwykle <b>1–3 tygodnie</b></span><a class="btn btn-line" href="#wycena" data-pick="klatka">Wyceń klatkę</a></div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section id="proces" class="process-band">
+  <section id="proces" class="on-dark">
     <div class="wrap">
       <div class="sec-head">
         <span class="eyebrow">Jak pracujemy</span>
@@ -517,22 +321,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:.75re
         <h2>Firma z nazwiskiem na drzwiach</h2>
         <p>Świetlicki Wykończenia to rodzinna firma z Trójmiasta. Irek osobiście robi wyceny, prowadzi każdą budowę i odbiera prace razem z klientem.</p>
         <p class="quote">„Podpisuję się nazwiskiem pod każdą łazienką. Dlatego wolę zrobić ją raz, a porządnie.”</p>
-        <span class="sign">— Irek Świetlicki</span>
-      </div>
-    </div>
-  </section>
-
-  <section style="padding-top:0">
-    <div class="wrap">
-      <div class="sec-head">
-        <span class="eyebrow">Typowe zlecenia</span>
-        <h2>Z czym najczęściej do nas dzwonicie</h2>
-      </div>
-      <!-- Gdy będą zdjęcia realizacji: podmień .ph na <div class="ph"><img src="..." alt="..."></div> i wpisz prawdziwe dane -->
-      <div class="works">
-        <article class="work"><div class="ph t1"></div><div class="work-b"><h3>Łazienka w bloku z lat 70.</h3><p>Skucie płytek, nowe piony i podejścia, prysznic walk-in z odpływem liniowym.</p><span class="spec">ok. 4–5 m² · 2–3 tygodnie</span></div></article>
-        <article class="work"><div class="ph t2"></div><div class="work-b"><h3>Mieszkanie od dewelopera</h3><p>Gładzie, podłogi, zabudowa przedpokoju, łazienka i WC pod klucz.</p><span class="spec">ok. 50–60 m² · 5–7 tygodni</span></div></article>
-        <article class="work"><div class="ph t3"></div><div class="work-b"><h3>Klatka w kamienicy</h3><p>Naprawa tynków, malowanie kondygnacji, odnowienie balustrady.</p><span class="spec">3–5 pięter · 1–3 tygodnie</span></div></article>
+        <span class="sign">Irek Świetlicki, właściciel</span>
       </div>
     </div>
   </section>
@@ -548,18 +337,18 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:.75re
         <table>
           <thead><tr><th>Usługa</th><th>Jednostka</th><th class="num">Cena od</th></tr></thead>
           <tbody>
-            <tr><td>Wykończenie mieszkania pod klucz<small>gładzie, malowanie, podłogi, biały montaż</small></td><td class="unit">m² podłogi</td><td class="num">650 zł</td></tr>
-            <tr><td>Remont łazienki kompleksowy<small>skucie, instalacje, hydroizolacja, płytki, montaż</small></td><td class="unit">łazienka do 5 m²</td><td class="num">16 000 zł</td></tr>
+            <tr><td>Wykończenie mieszkania pod klucz<small>gładzie, malowanie, podłogi, biały montaż</small></td><td class="unit">m² podłogi</td><td class="num">550 zł</td></tr>
+            <tr><td>Remont łazienki kompleksowy<small>skucie, instalacje, hydroizolacja, płytki, montaż</small></td><td class="unit">łazienka do 5 m²</td><td class="num">15 000 zł</td></tr>
             <tr><td>Układanie płytek<small>format do 60×60, z fugowaniem</small></td><td class="unit">m²</td><td class="num">150 zł</td></tr>
             <tr><td>Gładzie gipsowe i malowanie 2×</td><td class="unit">m² ściany</td><td class="num">55 zł</td></tr>
-            <tr><td>Adaptacja poddasza<small>ocieplenie, GK, szpachlowanie, malowanie</small></td><td class="unit">m² podłogi</td><td class="num">480 zł</td></tr>
-            <tr><td>Malowanie klatki schodowej<small>z naprawą tynków i lamperią</small></td><td class="unit">kondygnacja</td><td class="num">3 500 zł</td></tr>
+            <tr><td>Adaptacja poddasza<small>ocieplenie, GK, szpachlowanie, malowanie</small></td><td class="unit">m² podłogi</td><td class="num">400 zł</td></tr>
+            <tr><td>Odnowienie klatki schodowej<small>z naprawą tynków i lamperią</small></td><td class="unit">kondygnacja</td><td class="num">3 000 zł</td></tr>
           </tbody>
         </table>
       </div>
       <div class="price-foot">
-        <p>W lokalach mieszkalnych do 150 m² stosujemy VAT 8%. Materiały kupimy z rabatem hurtowni albo pracujemy na Twoich.</p>
-        <a class="btn btn-primary" href="#wycena">Policz swój remont</a>
+        <p>W lokalach mieszkalnych do 150 m² stosujemy VAT 8%.</p>
+        <a class="btn btn-dark" href="#wycena">Policz swój remont <svg width="18" height="18"><use href="#i-arrow"/></svg></a>
       </div>
     </div>
   </section>
@@ -572,13 +361,14 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:.75re
           <h2>Gwarancja na piśmie, nie na słowo</h2>
           <p>Odpadająca płytka, pęknięta fuga, przeciekający syfon. Przez 24 miesiące od odbioru przyjeżdżamy i poprawiamy na nasz koszt, w ciągu 7 dni od zgłoszenia.</p>
         </div>
+        <a class="btn btn-dark" href="#wycena">Umów oględziny</a>
       </div>
     </div>
   </section>
 
-  <section id="faq">
+  <section id="faq" style="padding-top:0">
     <div class="wrap faq-grid">
-      <div class="sec-head" style="margin-bottom:0">
+      <div class="sec-head" style="margin-bottom:0;align-content:start">
         <span class="eyebrow">Pytania</span>
         <h2>Zanim zadzwonisz</h2>
         <p>Nie ma tu Twojego pytania? Zadzwoń, Irek odpowie od ręki.</p>
@@ -593,15 +383,15 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:.75re
     </div>
   </section>
 
-  <section class="final" id="kontakt">
+  <section class="final on-dark" id="kontakt">
     <div class="wrap final-grid">
       <div>
-        <span class="eyebrow" style="color:var(--accent)">Bezpłatna wycena</span>
+        <span class="eyebrow">Bezpłatna wycena</span>
         <h2>Sprawdź, ile będzie kosztował Twój remont</h2>
         <p>Cztery pytania i masz orientacyjną kwotę. Wiążący kosztorys po bezpłatnych oględzinach.</p>
       </div>
       <div class="final-actions">
-        <a class="btn btn-primary btn-lg" href="#wycena">Przejdź do kalkulatora</a>
+        <a class="btn btn-sand" href="#wycena">Przejdź do kalkulatora <svg width="18" height="18"><use href="#i-arrow"/></svg></a>
         <div class="contact-card">
           <dl>
             <div><dt>Telefon</dt><dd><span id="tel">+48 500 000 000</span><button class="copy" type="button" data-copy="tel">Kopiuj</button></dd></div>
@@ -614,111 +404,33 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:.75re
   </section>
 </main>
 
-<footer>
-  <div class="wrap">
-    <span>© 2026 Świetlicki Wykończenia · Irek Świetlicki · Trójmiasto</span>
-    <span>NIP 000-000-00-00</span>
+<footer class="site-foot">
+  <div class="wrap foot-grid">
+    <div>
+      <span class="logo"><span class="logo-mark" aria-hidden="true">IŚ</span><span class="logo-text"><b>Świetlicki</b><small>Wykończenia</small></span></span>
+      <p>Remonty i wykończenia wnętrz w Gdańsku, Gdyni, Sopocie i okolicach do 30 km.</p>
+    </div>
+    <div>
+      <h4>Oferta</h4>
+      <ul><li><a href="#uslugi">Wykończenie mieszkań</a></li><li><a href="#uslugi">Remonty łazienek</a></li><li><a href="#uslugi">Adaptacje strychów</a></li><li><a href="#uslugi">Klatki schodowe</a></li></ul>
+    </div>
+    <div>
+      <h4>Informacje</h4>
+      <ul><li><a href="polityka-prywatnosci.html">Polityka prywatności</a></li><li><button type="button" class="linkish" data-cookie-settings>Ustawienia cookies</button></li><li><a href="#cennik">Cennik</a></li><li><a href="#faq">Pytania</a></li></ul>
+    </div>
+  </div>
+  <div class="wrap foot-bottom">
+    <span>© 2026 Świetlicki Wykończenia · Irek Świetlicki · NIP 000-000-00-00</span>
+    <span>Zdjęcia poglądowe: Unsplash</span>
   </div>
 </footer>
 
-<div class="mobile-cta">
-  <a class="btn btn-line" href="tel:+48500000000">Zadzwoń</a>
-  <a class="btn btn-primary" href="#wycena">Wyceń remont</a>
+<div class="mobile-cta" id="mobile-cta">
+  <a class="btn btn-ghost-light" href="tel:+48500000000"><svg width="18" height="18"><use href="#i-phone"/></svg>Zadzwoń</a>
+  <a class="btn btn-sand" href="#wycena">Wyceń remont</a>
 </div>
 
-<script>
-(function(){
-  var quiz=document.getElementById('wycena');
-  var state={step:1,type:null,size:50,std:1};
-  var steps=quiz.querySelectorAll('.q');
-  var next=document.getElementById('q-next'), back=document.getElementById('q-back');
-  var bar=document.getElementById('q-bar'), stepLbl=document.getElementById('q-step'), secure=document.getElementById('q-secure');
-  var size=document.getElementById('q-size'), sizeOut=document.getElementById('q-size-out');
-  var sizeLabel=document.getElementById('size-label'), sizeHint=document.getElementById('size-hint');
-  var err=document.getElementById('q-err');
-
-  // stawki robocizny netto [od, do] dla standardu podstawowy/średni/wysoki
-  var RATES={
-    mieszkanie:{unit:'m²',min:20,max:150,def:50,label:'Ile metrów ma mieszkanie?',hint:'Powierzchnia podłogi, orientacyjnie.',r:[[550,700],[700,900],[900,1200]]},
-    lazienka:{unit:'m²',min:2,max:15,def:5,label:'Ile metrów ma łazienka?',hint:'Typowa łazienka w bloku ma 3–5 m².',r:[[3000,3800],[3800,4800],[4800,6200]],floor:12000},
-    strych:{unit:'m²',min:10,max:120,def:30,label:'Ile metrów ma strych?',hint:'Powierzchnia podłogi, orientacyjnie.',r:[[400,550],[550,700],[700,900]]},
-    klatka:{unit:'pięter',min:1,max:12,def:4,label:'Ile kondygnacji ma klatka?',hint:'Liczymy parter jako pierwszą kondygnację.',r:[[3000,4000],[4000,5000],[5000,6500]]}
-  };
-  function fmt(n){return n.toLocaleString('pl-PL')+' zł'}
-  function round(n){return Math.round(n/500)*500}
-  function sizeText(){var u=RATES[state.type]?RATES[state.type].unit:'m²';return state.size+' '+u}
-  function estimate(){
-    var c=RATES[state.type], r=c.r[state.std], lo=r[0]*state.size, hi=r[1]*state.size;
-    if(c.floor){lo=Math.max(lo,c.floor);hi=Math.max(hi,c.floor*1.25)}
-    return [round(lo),round(hi)];
-  }
-  function canNext(){
-    if(state.step===1) return !!state.type;
-    return true;
-  }
-  function render(){
-    steps.forEach(function(s){s.hidden=+s.dataset.step!==state.step});
-    var shown=Math.min(state.step,4);
-    bar.style.width=(state.step>=5?100:shown*25)+'%';
-    stepLbl.textContent=state.step>=5?'Gotowe':'Krok '+shown+' z 4';
-    back.disabled=state.step===1||state.step===5;
-    next.hidden=state.step===5;
-    next.disabled=!canNext();
-    next.textContent=state.step===3?'Pokaż wycenę':state.step===4?'Wyślij i umów oględziny':'Dalej';
-    secure.hidden=state.step!==4;
-    if(state.step===4){
-      var e=estimate();
-      document.getElementById('q-est').textContent=fmt(e[0])+' – '+fmt(e[1]);
-      var stdName=['podstawowy','średni','wysoki'][state.std];
-      document.getElementById('q-est-note').textContent=sizeText()+' · standard '+stdName+' · netto, bez materiałów';
-    }
-  }
-  function setType(v){
-    state.type=v;
-    quiz.querySelectorAll('[data-k="type"]').forEach(function(b){b.setAttribute('aria-pressed',b.dataset.v===v)});
-    var c=RATES[v]; size.min=c.min; size.max=c.max; size.value=c.def; state.size=c.def;
-    sizeLabel.textContent=c.label; sizeHint.textContent=c.hint; sizeOut.textContent=sizeText();
-  }
-  quiz.addEventListener('click',function(e){
-    var t=e.target.closest('.tile'); if(!t) return;
-    if(t.dataset.k==='type'){setType(t.dataset.v);state.step=2}
-    else{state.std=+t.dataset.v;quiz.querySelectorAll('[data-k="std"]').forEach(function(b){b.setAttribute('aria-pressed',b===t)})}
-    render();
-  });
-  size.addEventListener('input',function(){state.size=+size.value;sizeOut.textContent=sizeText()});
-  back.addEventListener('click',function(){if(state.step>1){state.step--;err.textContent='';render()}});
-  next.addEventListener('click',function(){
-    if(state.step<4){state.step++;render();return}
-    var name=document.getElementById('q-name'), phone=document.getElementById('q-phone'), rodo=document.getElementById('q-rodo');
-    if(!name.value.trim()){err.textContent='Wpisz imię, żebyśmy wiedzieli, jak się do Ciebie zwracać.';name.focus();return}
-    if(phone.value.replace(/\D/g,'').length<9){err.textContent='Wpisz numer telefonu (9 cyfr), żebyśmy mogli oddzwonić.';phone.focus();return}
-    if(!rodo.checked){err.textContent='Zaznacz zgodę na kontakt, żebyśmy mogli oddzwonić z wyceną.';rodo.focus();return}
-    err.textContent='';
-    var e=estimate();
-    var lead={imie:name.value.trim(),telefon:phone.value.trim(),rodzaj:state.type,wielkosc:sizeText(),standard:['podstawowy','średni','wysoki'][state.std],
-      miasto:document.getElementById('q-city').value,termin:document.getElementById('q-when').value,wycena:fmt(e[0])+' – '+fmt(e[1])};
-    var ep=quiz.dataset.endpoint;
-    if(!ep){err.textContent='Wysyłka zgłoszeń nie jest jeszcze podłączona. Zadzwoń pod +48 500 000 000.';return}
-    next.disabled=true; next.textContent='Wysyłanie…';
-    fetch(ep,{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify(lead)})
-      .then(function(r){if(!r.ok)throw 0;state.step=5;render()})
-      .catch(function(){err.textContent='Nie udało się wysłać. Zadzwoń pod +48 500 000 000.';next.disabled=false;next.textContent='Wyślij i umów oględziny'});
-  });
-  document.querySelectorAll('[data-pick]').forEach(function(a){
-    a.addEventListener('click',function(){setType(a.dataset.pick);state.step=2;render()});
-  });
-  render();
-
-  document.querySelectorAll('[data-copy]').forEach(function(b){
-    b.addEventListener('click',function(){
-      var el=document.getElementById(b.dataset.copy), t=el.textContent.trim();
-      var done=function(){b.textContent='Skopiowano';setTimeout(function(){b.textContent='Kopiuj'},1600)};
-      var fallback=function(){var r=document.createRange();r.selectNodeContents(el);var s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent='Zaznaczono'};
-      try{navigator.clipboard.writeText(t).then(done,fallback)}catch(e){fallback()}
-    });
-  });
-})();
-</script>
-
+<script src="cookies.js"></script>
+<script src="app.js"></script>
 </body>
 </html>
