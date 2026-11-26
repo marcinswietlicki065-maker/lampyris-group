@@ -44,6 +44,7 @@
       <ul>
         <li><a href="#uslugi">Usługi</a></li>
         <li><a href="#pakiety">Pakiety</a></li>
+        <li><a href="#wspolnoty">Wspólnoty</a></li>
         <li><a href="#proces">Jak pracujemy</a></li>
         <li><a href="#o-firmie">O firmie</a></li>
         <li><a href="#faq">Pytania</a></li>
@@ -65,6 +66,7 @@
   <nav aria-label="Menu mobilne">
     <a href="#uslugi">Usługi</a>
     <a href="#pakiety">Pakiety</a>
+    <a href="#wspolnoty">Dla wspólnot</a>
     <a href="#proces">Jak pracujemy</a>
     <a href="#o-firmie">O firmie</a>
     <a href="#cennik">Cennik</a>
@@ -97,7 +99,7 @@
         <div class="hero-points">
           <div><b>24 mies.</b><span>gwarancji na robociznę</span></div>
           <div><b>0 zł</b><span>za oględziny i kosztorys</span></div>
-          <div><b>VAT 8%</b><span>w lokalach mieszkalnych</span></div>
+          <div><b>Etapami</b><span>płacisz po odbiorze prac</span></div>
         </div>
       </div>
 
@@ -132,10 +134,11 @@
           <div class="q" data-step="3" hidden>
             <p class="q-label">Jaki standard wykończenia?</p>
             <div class="tiles three" role="group" aria-label="Standard">
-              <button type="button" class="tile" data-k="std" data-v="0" aria-pressed="false"><b>Standard</b><span>solidnie, bez dodatków</span></button>
-              <button type="button" class="tile" data-k="std" data-v="1" aria-pressed="true"><b>Komfort</b><span>najczęściej wybierany</span></button>
-              <button type="button" class="tile" data-k="std" data-v="2" aria-pressed="false"><b>Premium</b><span>duże formaty, zabudowy</span></button>
+              <button type="button" class="tile" data-k="std" data-v="0" aria-pressed="false"><b>Standard</b><span>solidnie, bez dodatków</span><em class="tile-price" data-price="0"></em></button>
+              <button type="button" class="tile" data-k="std" data-v="1" aria-pressed="true"><b>Komfort</b><span>najczęściej wybierany</span><em class="tile-price" data-price="1"></em></button>
+              <button type="button" class="tile" data-k="std" data-v="2" aria-pressed="false"><b>Premium</b><span>duże formaty, zabudowy</span><em class="tile-price" data-price="2"></em></button>
             </div>
+            <p class="q-hint" style="margin-top:-.4rem">Kwoty to orientacyjna robocizna netto dla podanego metrażu. Dokładną cenę podamy po oględzinach.</p>
             <label for="q-when">Kiedy chcesz zacząć?
               <select id="q-when"><option>Jak najszybciej</option><option selected>W ciągu 1–3 miesięcy</option><option>Za 3–6 miesięcy</option><option>Jeszcze nie wiem</option></select>
             </label>
@@ -178,6 +181,23 @@
       <div class="item"><svg width="28" height="28"><use href="#i-shield"/></svg><div><b>24 mies. gwarancji</b><span>na całą robociznę</span></div></div>
     </div>
   </div>
+
+  <section class="bath-band" aria-labelledby="bath-h">
+    <div class="wrap bath-grid">
+      <div class="bath-img"><img loading="lazy" src="https://images.unsplash.com/photo-1638799869566-b17fa794c4de?auto=format&fit=crop&w=1000&h=750&q=70" alt="Jasna łazienka z wanną i prysznicem walk-in"></div>
+      <div class="bath-text">
+        <span class="eyebrow">Najczęstsze zlecenie</span>
+        <h2 id="bath-h">Remont łazienki pod klucz w 2–4 tygodnie</h2>
+        <p>Skuwamy stare płytki, wymieniamy instalacje i piony, robimy hydroizolację i kładziemy płytki z równą fugą i spadkiem do odpływu. Jedna ekipa od skucia do białego montażu.</p>
+        <ul class="bath-facts">
+          <li><b>od 15 000 zł</b><span>robocizna, łazienka do 5 m²</span></li>
+          <li><b>2–4 tyg.</b><span>od skucia do odbioru</span></li>
+          <li><b>24 mies.</b><span>gwarancji na szczelność</span></li>
+        </ul>
+        <a class="btn btn-dark" href="#wycena" data-pick="lazienka">Poproś o wycenę łazienki <svg width="18" height="18"><use href="#i-arrow"/></svg></a>
+      </div>
+    </div>
+  </section>
 
   <section id="uslugi">
     <div class="wrap">
@@ -275,7 +295,24 @@
           <a class="btn btn-line" href="#wycena" data-std="2" data-pick="mieszkanie">Wyceń w Premium</a>
         </article>
       </div>
-      <p class="pkg-note">Ceny netto, orientacyjne. Wiążącą kwotę podajemy w pisemnym kosztorysie po bezpłatnych oględzinach.</p>
+      <p class="pkg-note">Ceny netto, orientacyjne. Wiążącą kwotę podajemy w pisemnym kosztorysie po bezpłatnych oględzinach. <strong>Płacisz etapami</strong>, po odbiorze każdego etapu prac, a nie całość z góry.</p>
+    </div>
+  </section>
+
+  <section id="wspolnoty" class="hoa-band">
+    <div class="wrap hoa-grid">
+      <div class="hoa-text">
+        <span class="eyebrow">Dla wspólnot i zarządców</span>
+        <h2>Odnowienie klatki schodowej bez chaosu w bloku</h2>
+        <p>Przygotujemy ofertę, którą zarząd może od razu położyć na stole przy uchwale, i zorganizujemy prace tak, żeby mieszkańcy normalnie wchodzili do domu.</p>
+        <a class="btn btn-sand" href="#wycena" data-pick="klatka">Poproś o ofertę dla wspólnoty <svg width="18" height="18"><use href="#i-arrow"/></svg></a>
+      </div>
+      <ul class="hoa-list">
+        <li><svg width="22" height="22"><use href="#i-doc"/></svg><div><b>Oferta pod uchwałę</b><span>kosztorys pozycja po pozycji, łatwy do porównania z innymi ofertami, z wariantem podstawowym i rozszerzonym</span></div></li>
+        <li><svg width="22" height="22"><use href="#i-cal"/></svg><div><b>Harmonogram i ogłoszenia</b><span>wywieszamy informacje dla mieszkańców z datami prac na każdym piętrze</span></div></li>
+        <li><svg width="22" height="22"><use href="#i-stairs"/></svg><div><b>Praca etapami</b><span>piętro po piętrze, klatka cały czas przejezdna, sprzątanie po każdym dniu</span></div></li>
+        <li><svg width="22" height="22"><use href="#i-shield"/></svg><div><b>Umowa i gwarancja na wspólnotę</b><span>faktura na wspólnotę, protokół odbioru z zarządem, 24 miesiące gwarancji</span></div></li>
+      </ul>
     </div>
   </section>
 
@@ -373,6 +410,7 @@
       </div>
       <div class="faq">
         <details><summary>Jak szybko możecie zacząć?</summary><p>Oględziny umawiamy zwykle w ciągu kilku dni. Termin startu zależy od grafiku i wpisujemy go do umowy razem z datą zakończenia.</p></details>
+        <details><summary>Jak wygląda płatność?</summary><p>Płacisz etapami zapisanymi w umowie, np. po skuciu i instalacjach, po płytkach i po odbiorze końcowym. Każdy etap odbierasz przed zapłatą. Materiały rozliczamy osobno według faktur z hurtowni.</p></details>
         <details><summary>Ile kosztuje wycena?</summary><p>Nic. Przyjazd, oględziny i pisemny kosztorys są bezpłatne i do niczego nie zobowiązują. Decyzję podejmujesz, kiedy masz wszystko na papierze.</p></details>
         <details><summary>Czy kupujecie materiały?</summary><p>Tak, jeśli chcesz. Doradzamy, kupujemy w hurtowniach z rabatem i dowozimy na budowę. Możesz też dostarczyć własne.</p></details>
         <details><summary>Czy muszę być na miejscu w trakcie prac?</summary><p>Nie. Wystarczy przekazać klucze. Co tydzień dostajesz zdjęcia postępu, a decyzje, np. układ płytek, uzgadniamy telefonicznie.</p></details>
