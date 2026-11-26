@@ -71,6 +71,16 @@
     if(c.floor){lo=Math.max(lo,c.floor);hi=Math.max(hi,c.floor*1.25)}
     return [round(lo),round(hi)];
   }
+
+  // Zgłoszenia trafiają do tabeli `leads` w Lovable Cloud (klucz publiczny, RLS pozwala tylko dopisywać).
+  var LEADS_URL='https://c--928f564b-af97-43a0-8162-fa7778d83283-prod.lovable.cloud/rest/v1/leads';
+  var LEADS_KEY='sb_publishable_bNxQzPb15-T1drZQ3kWLOA_xes8x0gZ';
+  function submitLead(lead){
+    var row={imie:lead.imie,telefon:lead.telefon,rodzaj:lead.rodzaj,wielkosc:lead.wielkosc,standard:lead.standard,miasto:lead.miasto,termin:lead.termin,opis:lead.opis||null};
+    if(typeof window.swSubmitLead==='function') return window.swSubmitLead(row);
+    return fetch(LEADS_URL,{method:'POST',headers:{'Content-Type':'application/json',apikey:LEADS_KEY,Prefer:'return=minimal'},body:JSON.stringify(row)})
+      .then(function(r){if(!r.ok)throw new Error('HTTP '+r.status)});
+  }
   function track(name,data){ // przekazuje zdarzenia do analityki tylko po zgodzie (patrz cookies.js)
     if(window.swConsent && window.swConsent.has('analytics') && typeof window.gtag==='function') window.gtag('event',name,data||{});
   }
@@ -92,7 +102,7 @@
     }
     if(state.step===4){
       var names={mieszkanie:'Mieszkanie',lazienka:'Łazienka',strych:'Strych',klatka:'Klatka schodowa'};
-      document.getElementById('q-summary').textContent=names[state.type]+', '+sizeText()+', standard '+STD[state.std]+'. Irek oddzwoni w ciągu 24 godzin roboczych i umówi bezpłatne oględziny.';
+      document.getElementById('q-summary').textContent=names[state.type]+', '+sizeText()+', standard '+STD[state.std]+'. Oddzwonimy w ciągu 24 godzin roboczych i umówimy bezpłatne oględziny.';
     }
   }
   function setType(v){
@@ -122,11 +132,9 @@
     err.textContent='';
     var lead={_subject:'Prośba o darmową wycenę: '+state.type,imie:name.value.trim(),telefon:phone.value.trim(),rodzaj:state.type,wielkosc:sizeText(),
       standard:STD[state.std],miasto:document.getElementById('q-city').value,termin:document.getElementById('q-when').value,opis:document.getElementById('q-msg').value.trim().slice(0,1000)};
-    var ep=quiz.dataset.endpoint;
-    if(!ep){err.textContent='Wysyłka zgłoszeń nie jest jeszcze podłączona. Zadzwoń pod '+PHONE+'.';return}
     next.disabled=true; next.textContent='Wysyłanie…';
-    fetch(ep,{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify(lead)})
-      .then(function(r){if(!r.ok)throw 0;state.step=5;render();track('generate_lead',{type:state.type})})
+    submitLead(lead)
+      .then(function(){next.disabled=false;next.textContent='Poproś o wycenę';state.step=5;render();track('generate_lead',{type:state.type})})
       .catch(function(){err.textContent='Nie udało się wysłać. Zadzwoń pod '+PHONE+'.';next.disabled=false;next.textContent='Poproś o wycenę'});
   });
   document.querySelectorAll('[data-pick]').forEach(function(a){
