@@ -63,9 +63,11 @@
   };
   function fmt(n){return n.toLocaleString('pl-PL')+' zł'}
   function round(n){return Math.round(n/500)*500}
+  function short(n){return n>=10000?(Math.round(n/1000)).toLocaleString('pl-PL')+' tys. zł':n.toLocaleString('pl-PL')+' zł'}
   function sizeText(){var c=RATES[state.type];return state.size+' '+(c?c.unit:'m²')}
-  function estimate(){
-    var c=RATES[state.type], r=c.r[state.std], lo=r[0]*state.size, hi=r[1]*state.size;
+  function estimate(std){
+    if(std===undefined) std=state.std;
+    var c=RATES[state.type], r=c.r[std], lo=r[0]*state.size, hi=r[1]*state.size;
     if(c.floor){lo=Math.max(lo,c.floor);hi=Math.max(hi,c.floor*1.25)}
     return [round(lo),round(hi)];
   }
@@ -82,6 +84,12 @@
     next.disabled=state.step===1&&!state.type;
     next.textContent=state.step===4?'Poproś o wycenę':'Dalej';
     secure.hidden=state.step!==4;
+    if(state.step===3 && state.type){
+      quiz.querySelectorAll('.tile-price').forEach(function(el){
+        var e=estimate(+el.dataset.price);
+        el.textContent=e[0]>=10000?(Math.round(e[0]/1000)+'–'+Math.round(e[1]/1000)+' tys. zł'):(e[0].toLocaleString('pl-PL')+'–'+e[1].toLocaleString('pl-PL')+' zł');
+      });
+    }
     if(state.step===4){
       var names={mieszkanie:'Mieszkanie',lazienka:'Łazienka',strych:'Strych',klatka:'Klatka schodowa'};
       document.getElementById('q-summary').textContent=names[state.type]+', '+sizeText()+', standard '+STD[state.std]+'. Irek oddzwoni w ciągu 24 godzin roboczych i umówi bezpłatne oględziny.';
