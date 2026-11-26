@@ -413,3 +413,8 @@ details p{padding:0 0 1.4rem;color:var(--muted);max-width:44rem}
 .hoa-list svg{color:var(--sand-deep)}
 .hoa-list b{display:block;font-weight:600;margin-bottom:.2rem}
 .hoa-list span{font-size:.9rem;color:var(--muted)}
+
+/* logo Lampyris (świetlik) */
+svg.logo-mark{width:40px;height:40px;border:0;border-radius:0;display:block;flex:none}
+@media (max-width:639px){svg.logo-mark{width:36px;height:36px}}
+.portrait .mark-big{width:clamp(7rem,22vw,11rem);height:auto;color:var(--on-dark)}
