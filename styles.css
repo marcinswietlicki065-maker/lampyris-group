@@ -64,7 +64,7 @@ section{padding-block:clamp(4rem,9vw,7.5rem)}
 .logo{display:flex;align-items:center;gap:.75rem;text-decoration:none;line-height:1}
 .logo-mark{width:40px;height:40px;border-radius:50%;border:1.5px solid currentColor;display:grid;place-items:center;font:500 .95rem var(--f-display);letter-spacing:.02em;flex:none}
 .logo-text b{display:block;font:500 1.12rem var(--f-display);letter-spacing:.2em;text-transform:uppercase}
-.logo-text small{display:block;font-size:.62rem;letter-spacing:.32em;text-transform:uppercase;opacity:.7;margin-top:.3rem}
+.logo-text small{display:block;font-size:.6rem;letter-spacing:.2em;white-space:nowrap;text-transform:uppercase;opacity:.7;margin-top:.3rem}
 .nav{display:flex;align-items:center;gap:2rem}
 .nav ul{display:flex;gap:1.75rem;list-style:none;margin:0;padding:0}
 .nav ul a{text-decoration:none;font-size:.93rem;font-weight:500;opacity:.85;transition:opacity .2s}
